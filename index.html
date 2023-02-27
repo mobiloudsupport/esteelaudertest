@@ -1,53 +1,263 @@
 <html>
-  <head>
-    <style>
-      body {
-        background-color: #132452;
-        font-family: "Optima";
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-      }
-
-      h1 {
-        color: white;
-        text-align: center;
-        margin: 1rem 0;
-      }
-
-      .flag-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .flag-option {
-        margin: 1rem 0;
-        width: 50%;
-        background-color: #132452;
-        border: none;
-      }
-
-      .flag-img {
-        width: 50%;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="flag-container">
-      <h1>Choose your language</h1>
-      <h1>选择你的国家</h1>
-      <h1>เลือกประเทศของคุณ</h1>
-      <div class="flag-option">
-        <img class="flag-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/2560px-Flag_of_the_Republic_of_China.svg.png" onClick='selectConfigurationButton.performClick("BgYwwB")' />
-      </div>
-      <div class="flag-option">
-        <img class="flag-img" src="https://cdn.britannica.com/78/6078-004-77AF7322/Flag-Australia.jpg" onClick='selectConfigurationButton.performClick("O5cFzq")' />
-      </div>
-      <div class="flag-option">
-        <img class="flag-img" src="https://cdn.britannica.com/38/4038-004-111388C2/Flag-Thailand.jpg" onClick='selectConfigurationButton.performClick("PhBTkM")' />
-      </div>
-    </div>
-  </body>
+​
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Cosmetics Company Store - Select your store</title>
+	<style>
+		html,
+		body,
+		div,
+		span,
+		applet,
+		object,
+		iframe,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		p,
+		blockquote,
+		pre,
+		a,
+		abbr,
+		acronym,
+		address,
+		big,
+		cite,
+		code,
+		del,
+		dfn,
+		em,
+		img,
+		ins,
+		kbd,
+		q,
+		s,
+		samp,
+		small,
+		strike,
+		strong,
+		sub,
+		sup,
+		tt,
+		var,
+		b,
+		u,
+		i,
+		center,
+		dl,
+		dt,
+		dd,
+		ol,
+		ul,
+		li,
+		fieldset,
+		form,
+		label,
+		legend,
+		table,
+		caption,
+		tbody,
+		tfoot,
+		thead,
+		tr,
+		th,
+		td,
+		article,
+		aside,
+		canvas,
+		details,
+		embed,
+		figure,
+		figcaption,
+		footer,
+		header,
+		hgroup,
+		menu,
+		nav,
+		output,
+		ruby,
+		section,
+		summary,
+		time,
+		mark,
+		audio,
+		video {
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+			margin: 0;
+			padding: 0
+		}
+​
+		article,
+		aside,
+		details,
+		figcaption,
+		figure,
+		footer,
+		header,
+		hgroup,
+		menu,
+		nav,
+		section {
+			display: block
+		}
+​
+		body {
+			--navy-blue: #002554;
+			line-height: 1
+		}
+​
+		ol,
+		ul {
+			list-style: none
+		}
+​
+		blockquote,
+		q {
+			quotes: none
+		}
+​
+		blockquote:before,
+		blockquote:after,
+		q:before,
+		q:after {
+			content: none
+		}
+​
+		table {
+			border-collapse: collapse;
+			border-spacing: 0
+		}
+​
+		html,
+		body {
+			height: 100%;
+			background-color: #0f2554;
+			color: #fff;
+		}
+​
+		main.choice {
+			font-size: 10px;
+			display: flex;
+			flex-wrap: wrap;
+			row-gap: 6em;
+			justify-content: center;
+			align-items: center;
+			align-content: flex-start;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+​
+		.logo {
+			margin-top: 6em;
+		}
+​
+		.logo img {
+			width: 80%;
+		}
+​
+		h2 {
+			font-size: 2.5em;
+			width: 100%;
+		}
+​
+		.options-wrapper {
+			display: grid;
+			row-gap: 6.7vmin;
+		}
+​
+		.options-wrapper>li {
+			background-color: #fff;
+			color: var(--navy-blue);
+			background-image: url(https://shop.thecompanystore.com.sg/media/wysiwyg/app/arrow.png);
+			background-position-x: 97%;
+			background-position-y: center;
+			background-repeat: no-repeat;
+			background-size: 6.5vmin;
+		}
+​
+		.option {
+			line-height: 1.5em;
+		}
+​
+		.option span {
+			display: block;
+			color: var(--navy-blue);
+			line-height: 1em;
+			font-size: 4.5vmin;
+			font-weight: 300;
+			text-align: left;
+			padding: 1.6vmin 10vmin 1.6vmin 1.5vmin;
+			border-radius: 4px;
+		}
+​
+		.option button {
+			width: 100%;
+			text-decoration: none;
+			background: transparent;
+			border: 0;
+			padding: 0;
+		}
+​
+		.option button:active {
+			outline: 0;
+			border: 0;
+		}
+​
+		.option button:focus {
+			outline: 0;
+			border: 0;
+		}
+	</style>
+</head>
+​
+<body>
+	<script type="text/javascript"> var __cfRLUnblockHandlers = 1; </script>
+	<main class="choice">
+		<div class="logo">
+			<img src="https://shop.thecompanystore.com.sg/media/wysiwyg/app/logo-app.png" alt="The Company Store">
+		</div>
+		<h2>Show with us in...</h2>
+		<ul class="options-wrapper">
+			<li>
+				<div class="option default">
+					<button onClick='selectConfigurationButton.performClick("uINo9p");'>
+						<span>Australia</span>
+					</button>
+				</div>
+			</li>
+			<li>
+				<div class="option">
+					<button onClick='selectConfigurationButton.performClick("u9PkOt");'>
+						<span>Hong Kong 香港</span>
+					</button>
+				</div>
+			</li>
+			<li>
+				<div class="option">
+					<button onClick='selectConfigurationButton.performClick("u7PkOt");'>
+						<span>Taiwan 台灣</span>
+					</button>
+				</div>
+			</li>
+			<li>
+				<div class="option">
+					<button onClick='selectConfigurationButton.performClick("u3PkOt");'>
+						<span>Thailand ประเทศไทย</span>
+					</button>
+				</div>
+			</li>
+		</ul>
+	</main>
+</body>
+​
 </html>
